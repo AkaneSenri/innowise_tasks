@@ -4,10 +4,8 @@ namespace src;
 
 class Task8
 {
-
-    function main(string $json): string
+    public function main(string $json): string
     {
-
         $jsonInfo = '{
             "Title": "The Cuckoos Calling",
             "Author": "Robert Galbraith",
@@ -21,15 +19,14 @@ class Task8
         $newString = '';
         foreach ($newData as $key => $chunk) {
             $temp = $key;
-            $temp .= ": ";
+            $temp .= ': ';
             $temp .= $chunk;
             $newString .= $temp;
             if ($chunk !== end($newData)) {
                 $newString .= "\r\n";
             }
         }
+
         return $newString;
     }
 }
-
-print_r((new Task8)->main('das'));
