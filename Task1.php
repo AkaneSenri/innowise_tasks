@@ -4,20 +4,17 @@ namespace src;
 
 class Task1
 {
-    public function main(int $inputNumber): string
+    public function main(int $inputNumber)
     {
-        if ($inputNumber > 30) {
-            return 'More than 30';
-        }
-        if ($inputNumber > 20) {
-            return 'More than 20';
-        }
-        if ($inputNumber > 10) {
-            return 'More than 10';
-        }
-        if ($inputNumber < 10) {
-            return 'Less than 10';
-        }
+        $response = $inputNumber > 30
+        ? 'More than 30'
+        : ($inputNumber > 20
+        ? 'More than 20'
+        : ($inputNumber > 10
+        ? 'More than 10'
+        : 'Less than 10!'));
+        echo $inputNumber.' : '.$response."\n";
     }
 }
+
 
