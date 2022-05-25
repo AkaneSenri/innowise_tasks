@@ -8,10 +8,10 @@ class Task9
 
     function main(array $arr, int $number)
     {
-        $govno = is_array($arr);
-        $kaka = is_int($number);
+        $array = is_array($arr);
+        $num = is_int($number);
 
-        if ($kaka == 1 || $govno == 1) {
+        if ($array == 1 || $num == 1) {
             $count = count($arr) - 2;
             $result = [];
 
