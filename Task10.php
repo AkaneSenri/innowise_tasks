@@ -4,7 +4,7 @@ namespace src;
 
 class Task10
 {
-    function main(int $input): array
+    public function main(int $input): array
     {
         if ($input >= 0) {
             $num_seq = [$input];
@@ -19,6 +19,7 @@ class Task10
                 }
                 array_push($num_seq, $input);
             }
+
             return $num_seq;
         } else {
             throw new \InvalidArgumentException();
