@@ -2,14 +2,11 @@
 
 namespace src;
 
-use \Datetime;
-
 class Task2
-
 {
-    function main(string $birthday): int
+    public function main(string $birthday): int
     {
-        if (preg_match("/^[0-9]{2}[.]{1}[0-9]{2}[.]{1}[0-9]{4}$/", $birthday)) {
+        if (preg_match('/^[0-9]{2}[.]{1}[0-9]{2}[.]{1}[0-9]{4}$/', $birthday)) {
             $dateNow = new \DateTime('today');
             $bd = new \DateTime($birthday);
             $bd->setDate($dateNow->format('Y'), $bd->format('m'), $bd->format('d'));
@@ -18,9 +15,11 @@ class Task2
                 $bd->modify('+1 year');
                 $tmp = $dateNow->diff($bd);
             }
+
             return $tmp->days;
         } else {
             throw new \InvalidArgumentException();
         }
     }
 }
+
