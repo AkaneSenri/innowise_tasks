@@ -3,10 +3,8 @@
 namespace src;
 
 class Task9
-
 {
-
-    function main(array $arr, int $number)
+    public function main(array $arr, int $number)
     {
         $array = is_array($arr);
         $num = is_int($number);
@@ -21,7 +19,7 @@ class Task9
                 }
             }
 
-        return $result;
+            return $result;
         } else {
             throw new \InvalidArgumentException();
         }
