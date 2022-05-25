@@ -4,7 +4,7 @@ namespace src;
 
 class Task3
 {
-    function main(int $input): int
+    public function main(int $input): int
     {
         if ($input >= 10 && !is_float($input)) {
             if ($input > 0) {
