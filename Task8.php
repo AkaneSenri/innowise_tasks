@@ -20,14 +20,14 @@ class Task8
                         $temp .= ': ';
                         $temp .= $v;
                         $newString .= $temp;
-                        $newString .= "\r\n";
+                        $newString .= "</br>";
                     }
                 } else {
                     $temp = $key;
                     $temp .= ': ';
                     $temp .= $chunk;
                     $newString .= $temp;
-                    $newString .= "\r\n";
+                    $newString .= "</br>";
                 }
             }
 
